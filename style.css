@@ -1,0 +1,86 @@
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+
+body{
+      background-color: #000;
+      font-family: 'Oswald', sans-serif;
+      min-height: 100vh;
+      overflow: hidden;
+}
+
+.wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+}
+
+.input-group{
+      margin: 1rem;
+      display: flex;
+      gap: 1rem;
+}
+
+input,button{
+      max-width: 20rem;
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+      border: none;
+      border-radius: .4rem;
+}
+
+input:focus{
+      outline: 4px solid #FEA47F;
+      outline-offset:4px;
+}
+
+button{
+      cursor: pointer;
+      background-color: #FEA47F;
+}
+
+.letter-wrapper{
+      font-size: 16vw;
+      letter-spacing: 2vw;
+      position: relative;
+      pointer-events: none;
+}
+
+.animation-stop span{
+      animation-play-state: paused;
+}
+
+
+.letter{
+      line-height: 1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      animation: ans 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+}
+
+
+
+.letter:last-child{
+      position: relative;
+      visibility: hidden;
+}
+
+
+@keyframes ans{
+      0%,20%{
+            transform: translateY(0);
+      }
+
+      40%,60%{
+            transform-style: preserve-3d;
+            transform: translateY(-12vw)  rotateY(360deg);
+      }
+
+}
