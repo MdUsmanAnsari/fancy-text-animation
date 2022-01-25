@@ -16,7 +16,7 @@ body{
       justify-content: center;
       align-items: center;
       position: absolute;
-      top: 60%;
+      top: 65%;
       left: 50%;
       transform: translate(-50%,-50%);
 }
@@ -45,8 +45,12 @@ button{
       background-color: #FEA47F;
 }
 
+select{
+      padding: 0 1rem;
+}
+
 .letter-wrapper{
-      font-size: 16vw;
+      font-size: 12vw;
       letter-spacing: 2vw;
       position: relative;
       pointer-events: none;
@@ -62,8 +66,9 @@ button{
       position: absolute;
       left: 0;
       top: 0;
-      animation: ans 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
 }
+
+
 
 
 
@@ -72,15 +77,84 @@ button{
       visibility: hidden;
 }
 
+/*
+       Animation 
+*/ 
 
-@keyframes ans{
+.animation-top-to-bottom{
+      animation: ans-top-to-bottom 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+}
+
+.animation-top-to-bottom-rotateY{
+      animation: ans-top-to-bottom-rotateY 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+}
+
+.animation-top-to-bottom-rotateX{
+      animation: ans-top-to-bottom-rotateX 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+}
+
+.animation-top-to-bottom-rotate{
+      animation: ans-top-to-bottom-rotate 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+}
+
+.animation-5{
+      animation: ans-5 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+}
+
+
+
+@keyframes ans-top-to-bottom{
+      0%,20%{
+            transform: translateY(0);
+      }
+      40%,60%{
+            transform: translateY(-12vw);
+
+      }
+}
+
+@keyframes ans-top-to-bottom-rotateY{
+      0%,20%{
+            transform: translateY(0);
+      }
+      40%,60%{
+            transform: translateY(-12vw) rotateY(360deg);
+
+      }
+}
+
+@keyframes ans-top-to-bottom-rotateX{
+      0%,20%{
+            transform: translateY(0);
+      }
+      40%,60%{
+            transform: translateY(-12vw) rotateX(360deg);
+      }
+}
+
+@keyframes ans-top-to-bottom-rotate{
+      0%,20%{
+            transform: translateY(0);
+      }
+      40%,60%{
+            transform: translateY(-12vw) rotate(360deg);
+      }
+}
+
+@keyframes ans-5{
       0%,20%{
             transform: translateY(0);
       }
 
-      40%,60%{
-            transform-style: preserve-3d;
-            transform: translateY(-12vw)  rotateY(360deg);
+      35%{
+            transform:skewX(100deg)
       }
 
+      50%,70%{
+            transform: translateY(-12vw) rotate(360deg);
+      }
+
+      80%{
+            transform:skewX(100deg)
+      }
 }
