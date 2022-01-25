@@ -68,10 +68,6 @@ select{
       top: 0;
 }
 
-
-
-
-
 .letter:last-child{
       position: relative;
       visibility: hidden;
@@ -98,9 +94,14 @@ select{
 }
 
 .animation-5{
-      animation: ans-5 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+      transform-style: preserve-3d;
+      animation: ans-5 4.5s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
 }
 
+.animation-6{
+      transform-style: preserve-3d;
+      animation: ans-6 4.5s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+}
 
 
 @keyframes ans-top-to-bottom{
@@ -157,4 +158,23 @@ select{
       80%{
             transform:skewX(100deg)
       }
+}
+
+@keyframes ans-6{
+      0%,20%{
+            transform: translateY(0);
+      }
+
+      35%{
+            transform: translateY(-12vw) scale(1.4);
+      }
+
+      50%,70%{
+            transform: translateY(-12vw); 
+      }
+
+      85%{
+            transform: scale(1.4);
+      }
+
 }
