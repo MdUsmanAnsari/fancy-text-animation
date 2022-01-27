@@ -24,6 +24,7 @@ body{
 .input-group{
       margin: 1rem;
       display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
 }
 
